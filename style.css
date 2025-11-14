@@ -1,0 +1,62 @@
+canvas {
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.avatar-box {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: fadeIn 2s ease forwards;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff4d6d;
+  box-shadow: 0 0 20px rgba(255, 100, 130, 0.8);
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.avatar-text {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #ffd9e6;
+  font-family: "Arial", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 150, 180, 0.9);
+  animation: floatText 3s infinite ease-in-out;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Avatar phồng nhẹ */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Chữ nổi lên xuống nhẹ */
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
